@@ -6,7 +6,7 @@ class Solution {
         return ans;
     }
     public int fibo(int n,int[] arr){
-        if(n==1 || n==0) return n;
+        if(n==1 || n==2) return n;
         if(arr[n]!=-1) return arr[n];
         arr[n] = fibo(n-1,arr) + fibo(n-2,arr);
         return arr[n];
