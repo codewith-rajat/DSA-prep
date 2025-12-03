@@ -14,3 +14,23 @@ class Solution {
         help(root.right,ans);
     }
 }
+
+class Solution {
+    public ArrayList<Integer> inOrder(Node root) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        ArrayDeque<Node> st = new ArrayDeque<>();
+        Node temp = root;
+        while(true){
+            if(temp!=null){
+                st.push(temp);
+                temp = temp.left;
+            }else {
+                if(st.isEmpty()) break;
+                temp = st.pop();
+                ans.add(temp.data);
+                temp = temp.right;
+            }
+        }
+        return ans;
+    }
+}
