@@ -12,7 +12,7 @@ class Solution {
         int i = mp.get(rootval);
         TreeNode root = new TreeNode(rootval);
         root.right = solve(postorder,mp,i+1,end,idx-1);
-        root.left = solve(postorder,mp,start,i- 1,idx-(end-i)-1);
+        root.left = solve(postorder,mp,start,i-1,idx-(end-i)-1);
         return root;
     }
 }
